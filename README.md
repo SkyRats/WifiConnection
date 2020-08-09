@@ -1,7 +1,7 @@
 # WifiConection
 This is a way to make a wifi conection between two or more computers. In addition, all of them can use the same master on ros, working together.
 
-(ATTENTION: THE MASTER-CLIENT PART THATS NOT WORKING. FOLLOW THE INSTRUCTIONS ON WIKI ROS. LINK ON 'STEPBYSTEPOLD.TXT' FILE)
+(ATTENTION: THE MASTER-CLIENT PART is NOT WORKING. FOLLOW THE INSTRUCTIONS ON WIKI ROS. LINK ON 'STEPBYSTEPOLD.TXT' FILE)
 
 ## Instructions
   In computer1 run the program "hot-master". There will be the ros-master.
