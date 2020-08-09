@@ -14,6 +14,9 @@ This is a way to make a wifi conection between two or more computers. In additio
 ## Attention
  Thats a BETA, so there is a lot o problems on that sollution. For example, during my tests, I could run perfectly the programs in a sense, but, when I changed the computers 1 and 2, i couldn't connect on wifi created.
  
- Please write me and tell me your experience!
+## 'ReferenceWifi.txt'
+ Thats an initial search that I made about wifi connection. After that, I simplified the way to make the connection, but you can use it if the sollutin doesn't work well.
+ 
+Please write me and tell me about your experience!
  
 Ricardo C. do Lago
