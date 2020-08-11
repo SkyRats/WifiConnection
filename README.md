@@ -55,3 +55,4 @@ After this choix, in every terminal where you want to run something related with
 Please write me and tell me about your experience!
  
 **Ricardo C. do Lago**
+(email addr: ricardodolago@gmail.com)
