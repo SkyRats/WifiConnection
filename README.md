@@ -36,10 +36,10 @@ After this choix, in every terminal where you want to run something related with
    ```  
 
 4. In computer 2:
-```   
+   ```   
       $ source ./client
       $ rostopic echo /turtle1/pose
-```  
+   ```  
 
 ## Step-By-Step Option
   If this first way don't works, you can follow my daft of connection on 'StepByStepOLD.txt', where  I took notes of all the commands are needed.
