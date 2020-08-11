@@ -37,7 +37,7 @@ After this choix, in every terminal where you want to run something related with
 
 4. In computer 2:
    ```   
-      $ source ./client
+      $ source ./client.sh
       $ rostopic echo /turtle1/pose
    ```  
 
