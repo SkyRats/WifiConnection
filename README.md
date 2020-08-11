@@ -51,8 +51,8 @@ After this choix, in every terminal where you want to run something related with
  Thats an initial search that I made about wifi connection. After that, I simplified the way to make the connection, but you can use it if the sollutin in 'StepByStepOLD.txt' (with exec1.sh and exec2.sh) doesn't work well.
 
 ## If you want to run the Wifi connection step by default as the system boot
-    - Change the path on the `.desktop` file to the complete path of the compiled `hotspot.cpp` file
-    - move the `.desktop`file to the /home/$USER/.config/autostart folder
+   * Change the path on the ```.desktop``` file to the complete path of the compiled ```hotspot.cpp``` file
+   * move the ```.desktop``` file to the /home/$USER/.config/autostart folder
  --- ---
  
 Please write me and tell me about your experience!
