@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=CreateHotSpot
+Exec=PATH_TO_YOUR_COMPILED_FILE
+StartupNotify=false
+Terminal=false
+

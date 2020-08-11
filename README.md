@@ -4,7 +4,7 @@ This is a way to make a wifi connection between two or more computers. In additi
 ## Instructions
 
 ### Wifi Connection
-  In computer1, where you want to create a wifi-hotspot, run "hostspot". Then, to connect computer2 (and others, if you want), run in it "connection".
+  In computer1, where you want to create a wifi-hotspot, compile and run "hostspot". Then, to connect computer2 (and others, if you want), compile and run in it "connection".
   
 ### Ros Fusion
 Now, you need to decide in which of these computers you want to run the Ros' master, in other words, to run the "roscore". That could be the same computer where you have created the hotspot, as could be other where you just have connected in wifi network.
@@ -50,6 +50,9 @@ After this choix, in every terminal where you want to run something related with
 ## 'ReferenceWifi.txt'
  Thats an initial search that I made about wifi connection. After that, I simplified the way to make the connection, but you can use it if the sollutin in 'StepByStepOLD.txt' (with exec1.sh and exec2.sh) doesn't work well.
 
+## If you want to run the Wifi connection step by default as the system boot
+    * Change the path on the `.desktop` file to the complete path of the compiled `hotspot.cpp` file
+    * move the `.desktop`file to the /home/$USER/.config/autostart folder
  --- ---
  
 Please write me and tell me about your experience!
