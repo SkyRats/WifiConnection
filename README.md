@@ -1,4 +1,4 @@
-# WifiConection
+# WifiConnection
 This is a way to make a wifi connection between two or more computers. In addition, all of them can use the same master on ros, working together.
 
 ## Instructions
