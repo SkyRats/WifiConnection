@@ -8,14 +8,14 @@ Ass:Rick
 
 Dependências:
 
-	ifconfig, network-manager, ros 
-	(Os dois primeiros ja devem estar instalados, mas coloquei por preciosismo)
+	ifconfig, hostname, network-manager, ros 
+	(Os tres primeiros ja devem estar instalados, mas coloquei por preciosismo)
 
 
 Criando o Hotspot no Computador 1:
 
 	MODO EASY:
-		compila e executa o hotMaker.cpp
+		compila e executa o hotspot.cpp
 			$ g++ hotspot.cpp -o hot
 			$ ./hot
 
