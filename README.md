@@ -13,26 +13,26 @@ After this choix, in every terminal where you want to run something related with
 
 ## Example
 1. In computer 1
-```  
+   ```  
       $ cd [where_you_cloned_the_repository]
       $ ./hotspot
-```  
+   ```  
 2. In computer 2:
-```
+   ```
       $ cd [where_you_cloned_the_repository]
       $ ./connection
-```
+   ```
 3. I decided that computer 1 is the master.   
 
    * Terminal 1:  
    ```  
-    $ source master.sh  
-    $ roscore
+      $ source master.sh  
+      $ roscore
    ```   
    * Terminal 2:  
    ```  
-    $ source ./master.sh  
-    $ rosrun turtlesim turtlesim_node
+      $ source ./master.sh  
+      $ rosrun turtlesim turtlesim_node
    ```  
 
 4. In computer 2:
