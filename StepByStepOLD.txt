@@ -1,0 +1,73 @@
+Observações inicias:
+	-Esse arquivo é mais um esboço do que será escrito, provavelmente em README.
+	-Valeria à pena fazer uma versão em ingles disso, ja q deve ir ao github.
+	-Aida falta um tanto de coisa a ser incrementada, principalemnte para facilitar conexoes futuras kkk
+	-Meu plano eh fazer uns programas em c para ficar mais completo e automático.
+
+Ass:Rick
+
+Dependências:
+
+	ifconfig, network-manager, ros 
+	(Os dois primeiros ja devem estar instalados, mas coloquei por preciosismo)
+
+
+Criando o Hotspot no Computador 1:
+
+	MODO EASY:
+		compila e executa o hotMaker.cpp
+			$ g++ hotspot.cpp -o hot
+			$ ./hot
+
+	MODO STEP-BY-STEP:
+		Ligar o wifi (nunca se sabe quando esta desligado kkkk):
+			$ nmcli networking on
+			$ nmcli radio wifi on
+
+			rodar o comando ifconfig para achar o ifname da placa wifi (será um nome que começa com w, tipo wlp2s0, ou wlan0, ou as vezes wnadbfauiefbahefaefbaeku) 
+					$ ifconfig
+
+					obs: se por alguma grande infelicidade vc n tiver ifconfig, esse comando tmb é uma opção:
+					$ ip link show
+
+			rodar exec1.sh com o ifname dado no primeiro argumento
+					$ source ./exec1.sh [IFNAME]
+
+Conectar na rede com o Computador 2:
+
+	Ligar o wifi (nunca se sabe quando esta desligado kkkk):
+		$ nmcli networking on
+		$ nmcli radio wifi on
+
+
+	No computador 2:
+		$ source ./exec2.sh
+
+Unir as masters do ros:
+
+	FONTE:http://wiki.ros.org/ROS/Tutorials/MultipleMachines
+
+	hal=ip de hal
+	marvin = ip de marvin
+
+	no ifconfig, achar o ip4 da conexão (valor com tres pontos chamado de inet). Obs: o inet6 eh o ip6, que tambem deve funcionar
+
+	em hal (master):
+
+		arrumando as variáveis:
+			$ export ROS_HOSTNAME=localhost
+			$ export ROS_IP=[hal]
+			$ export ROS_MASTER_URI=http://[hal]:11311
+
+		Rodar acionar a master:
+			$ roscore
+
+	em marvin (cliente):
+
+		arrumando as variáveis:
+			$ export ROS_HOSTNAME=localhost
+			$ export ROS_IP=[marvin]
+			$ export ROS_MASTER_URI=http://[hal]:11311
+
+	
+
