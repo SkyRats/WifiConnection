@@ -3,11 +3,13 @@
 #include <unistd.h>
 #include <string.h>
 
+#include "defines.h"
+
 //Verificacoes iniciais
 int preciosismo();
 
-//Criacao da rede wifi com o Network-Manager
-int conect();
+//Coneccao da rede wifi pelo NetworkManager
+int connect();
 
 //Pega o ip4 do dispositivo wifi
 int getIP(char *ip);
@@ -22,7 +24,7 @@ int main (int argc, char *argv[])
     printf("Faltou algum pre-requisito.\nVerifique as dependência não encontradas dentre:\n hostname ros network-manager\n");
     exit(1);
   }
-  if(conect())
+  if(connect())
   {
     printf("Erro ao conectar na rede wifi\n");
     exit(1);
@@ -50,9 +52,11 @@ int preciosismo()
   return 1;
 }
 
-int conect()
-{
-  if(system("nmcli device wifi connect HotDaSky password 1234567891234"))
+int connect()
+{ 
+  char command[100];
+  sprintf(command, "nmcli device wifi connect %s password %s", WIFI_NAME, WIFI_PASSWORD);
+  if(system(command))
   {
     return 1;
   }

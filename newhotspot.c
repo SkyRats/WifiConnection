@@ -2,8 +2,7 @@
 #include <stdlib.h> 
 #include <unistd.h>
 
-#define MAXIFCONFIG 4000
-#define MAXIFNAME 40
+#include "defines.h"
 
 //Verificacoes iniciais
 int preciosismo();
@@ -15,7 +14,7 @@ int leTexto (FILE *fp , char T[MAXIFCONFIG]);
 int getIfname(char *ifname);
 
 //Criacao da rede wifi com o Network-Manager
-int makeHotspot(char *ifname);
+int turnOnHotspot(char *ifname);
 
 //Pega o ip4 do dispositivo wifi
 int getIP(char *ip);
@@ -34,7 +33,7 @@ int main (int argc, char *argv[])
     printf("Erro ao pegar ifname\n");
     exit(1);
   }
-  if(makeHotspot(ifname))
+  if(turnOnHotspot(ifname))
   {
     printf("Erro ao criar o hotspot\n");
     exit(1);
@@ -108,15 +107,22 @@ int getIfname(char ifname[MAXIFNAME])
   return 0;
 }
 
-int makeHotspot(char ifname[MAXIFNAME])
+int turnOnHotspot(char ifname[MAXIFNAME])
 {
-  char command[200];
-  sprintf(command, "nmcli device wifi hotspot ifname %s con-name HotDaSky ssid HotDaSky password 1234567891234", ifname);
+  char command[500];
+  sprintf(command, "nmcli device wifi hotspot ifname %s con-name HotDaSky ssid %s password %s", ifname, WIFI_NAME, WIFI_PASSWORD);
   if(system(command))
   {
     return 1;
   }
-  printf("\n--> UHULL: Criada a rede 'HotDaSky' com senha '1234567891234'\n\n");
+  sprintf(command, "nmcli connection modify id %s connection.autoconnect yes connecion.autoconnect-priority 5", WIFI_NAME);
+  if(system(command))
+  {
+    return 1;
+  }
+  char msg[300];
+  sprintf(msg, "\n--> UHULL: Criada a rede '%s' com senha '%s'\n\n", WIFI_NAME, WIFI_PASSWORD);
+  printf(msg);
   return 0;
 }
 
