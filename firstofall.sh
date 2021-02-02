@@ -1,5 +1,5 @@
 #! /bin/bash
 
-gcc ./src/connection.cpp ./src/defines.h -o connection
-gcc ./src/newhotspot.cpp ./src/defines.h -o newhotspot
-gcc ./src/reusing.ccp ./src/defines.h -o reusing
+gcc ./src/connection.c ./src/defines.h -o connection
+gcc ./src/newhotspot.c ./src/defines.h -o newhotspot
+gcc ./src/reusing.c ./src/defines.h -o reusing

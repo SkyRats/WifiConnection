@@ -110,19 +110,18 @@ int getIfname(char ifname[MAXIFNAME])
 int turnOnHotspot(char ifname[MAXIFNAME])
 {
   char command[500];
-  sprintf(command, "nmcli device wifi hotspot ifname %s con-name HotDaSky ssid %s password %s", ifname, WIFI_NAME, WIFI_PASSWORD);
+  sprintf(command, "nmcli device wifi hotspot ifname %s con-name %s ssid %s password %s", ifname, WIFI_NAME, WIFI_NAME, WIFI_PASSWORD);
   if(system(command))
   {
     return 1;
   }
-  sprintf(command, "nmcli connection modify id %s connection.autoconnect yes connecion.autoconnect-priority 5 ipv4.method shared", WIFI_NAME);
+  sleep(3);
+  sprintf(command, "nmcli connection modify id %s connection.autoconnect yes connection.autoconnect-priority 5 ipv4.method shared", WIFI_NAME);
   if(system(command))
   {
     return 1;
   }
-  char msg[300];
-  sprintf(msg, "\n--> UHULL: Criada a rede '%s' com senha '%s'\n\n", WIFI_NAME, WIFI_PASSWORD);
-  printf(msg);
+  printf("\n--> UHULL: Criada a rede '%s' com senha '%s'\n\n", WIFI_NAME, WIFI_PASSWORD);
   return 0;
 }
 

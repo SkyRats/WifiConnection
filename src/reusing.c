@@ -48,9 +48,7 @@ int turnOnHotspot()
   {
     return 1;
   }
-  char msg[300];
-  sprintf(msg, "\n--> UHULL: Ligada a rede wifi '%s' com senha '%s'\n\n", WIFI_NAME, WIFI_PASSWORD);
-  printf(msg);
+  printf("\n--> UHULL: Ligada a rede wifi '%s' com senha '%s'\n\n", WIFI_NAME, WIFI_PASSWORD);
   return 0;
 }
 
