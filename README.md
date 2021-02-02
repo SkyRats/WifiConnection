@@ -33,6 +33,8 @@ This is a way to make a wifi connection between two or more computers. In additi
    If, because of some reason that i cant understad, the hotspot is not been created when you turn on the computer, but it works when you run `reusing`, you can configure it on system to force runing `reusing` when you turn on the computer:
    * Check if the path of ```reusing``` file is correct on ```.desktop```
    * Move the ```.desktop``` file to the /home/$USER/.config/autostart folder
+   OR
+   * You can put the file in /etc/init.d and use it like a service (seach about it on web) 
 
 ### SSH accessing
 
