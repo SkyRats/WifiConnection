@@ -34,7 +34,7 @@ int main (int argc, char *argv[])
 int turnOnHotspot()
 {
   char command[500];
-  sprintf(command, "nmcli connection up ip %s", WIFI_NAME);
+  sprintf(command, "nmcli connection up id %s", WIFI_NAME);
   if(system(command))
   {
     return 1;

@@ -78,7 +78,7 @@ int getIP(char ip[20], char ifname[MAXIFNAME])
   int outInt[4];
   FILE *answ;
   char command[500];
-  sprintf(command, "ifconfig %s | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'", ifname);
+  sprintf(command, "ifconfig %s | grep 'inet' | cut -d: -f2 | awk '{print $2}'", ifname);
   answ = popen(command, "r");
   if (answ == NULL)
   {
