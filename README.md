@@ -60,7 +60,7 @@ Now, you need to decide in which of these computers you want to run the Ros' mas
 
 After this choix, in every terminal where you want to run something related with ros (```roscore```, ```rostopic```, ```rosrun```, ```rosservice```, ```rosmsg```...), it is necessary to make a source before all. The difference between master computer and the others is that in first you source ```master.sh``` and in others you source ```client.sh``` (with master's IP as first argument).
 
-## Example]
+## Example
 (**After the `First of All` step in both computers**...)
 
 1. In computer 1
@@ -99,13 +99,12 @@ After this choix, in every terminal where you want to run something related with
 ## Old Option
   If this first way don't works, you can follow my daft of connection on ```old/StepByStepOLD.txt```, where I took notes of all the commands are needed. 
   > Note: It is nice to use together `ZolubasObservation/observation.md`
-
+ 
+## Veryold Option
+ `ReferenceWifi.txt` is an initial search that I made about wifi connection. After that, I simplified the way to make the connection, but you can use it if the sollution in 'StepByStepOLD.txt' (with ```exec1.sh``` and ```exec2.sh```) doesn't work well.
+ 
 ## Attention
  This is a BETA, so there are a lot o problems on this sollution. For example, during my tests, I could run perfectly the programs in a direction, but, when I changed the computers 1 and 2, i couldn't connect on wifi created.
- 
-## Veryold file
- `ReferenceWifi.txt` is an initial search that I made about wifi connection. After that, I simplified the way to make the connection, but you can use it if the sollution in 'StepByStepOLD.txt' (with ```exec1.sh``` and ```exec2.sh```) doesn't work well.
-
  --- ---
 Please write to me and tell me about your experience!
  
