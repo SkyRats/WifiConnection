@@ -2,6 +2,8 @@
 This is a way to make a wifi connection between two or more computers. In addition, all of them can use the same master on ros, working together.
 
 ## First of All
+   **(Actions to be done once in each computer used during theese process...)**
+   
    To start using theese tools, it's necessary to make a `git clone`. So:
 ```
    $ cd ~/
@@ -25,9 +27,9 @@ This is a way to make a wifi connection between two or more computers. In additi
 
    If you mant to turn on the hotspot, but it isn't the firts time in **computer1**, run ```reusing```.
   
-   Then, to connect **computer2** (and others, if you want) on the network created, run ```connection```.
+   Then, to connect **computer2** (and others, if you want) on the network created, run ```connection``` in each os then.
    
-   ### Using automaticaly `reusing`
+   #### Using automaticaly `reusing`
    If, because of some reason that i cant understad, the hotspot is not been created when you turn on the computer, but it works when you run `reusing`, you can configure it on system to force runing `reusing` when you turn on the computer:
    * Check if the path of ```reusing``` file is correct on ```.desktop```
    * Move the ```.desktop``` file to the /home/$USER/.config/autostart folder
