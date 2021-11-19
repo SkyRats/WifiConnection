@@ -1,6 +1,31 @@
 # WifiConnection
 This is a way to make a wifi connection between two or more computers. In addition, all of them can use the same master on ros, working together.
 
+## Como Utilizar:
+Este script deixa tudo mais automático c:
+Obs: Caso você esteja com o módulo wifi TL-WN823N instale o driver atualizado, pois se não da erro de ad hoc, pelo link:
+https://github.com/SkyRats/knowledge_base/blob/main/docs/Hardware/Componentes/tlwn823n.md
+
+Para instalar as dependências (Rodar na primeira vez)
+```
+./WIFICONNECTION install
+```
+Para compilar o necessário (Rodar na primeira vez)
+```
+./WIFICONNECTION make
+```
+
+Para ativar o hotspot
+```
+./WIFICONNECTION start
+```
+
+Para desliga o hotspot
+```
+./WIFICONNECTION stop
+```
+
+
 ## First of All
    **(Actions to be done once in each computer used during theese process...)**
    
