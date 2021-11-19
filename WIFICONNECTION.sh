@@ -10,7 +10,6 @@ elif [[ $1 = "start" ]]
 then
     echo "Ligando..."
     ./newhotspot
-    ./connection
 elif [[ $1 = "stop" ]]
 then
     echo "Desligando..."
