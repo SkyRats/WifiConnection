@@ -3,7 +3,7 @@ then
     sudo apt install net-tools network-manager -y
 elif [[ $1 = "make" ]]
 then
-    ./firstoffall.sh
+    source firstoffall.sh
 elif [[ $1 = "start" ]]
 then
     echo "Ligando..."
@@ -11,4 +11,5 @@ then
 elif [[ $1 = "stop" ]]
 then
     echo "Desligando..."
+    nmcli connection down SkyratsHotspot
 fi
