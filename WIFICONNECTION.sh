@@ -1,9 +1,11 @@
+#!/bin/bash
+
 if   [[ $1 = "install" ]]
 then
     sudo apt install net-tools network-manager -y
 elif [[ $1 = "make" ]]
 then
-    source firstoffall.sh
+    sh firstofall.sh
 elif [[ $1 = "start" ]]
 then
     echo "Ligando..."
