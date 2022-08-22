@@ -3,9 +3,6 @@
 if   [[ $1 = "install" ]]
 then
     sudo apt install net-tools network-manager -y
-elif [[ $1 = "make" ]]
-then
-    sh firstofall.sh
 elif [[ $1 = "start" ]]
 then
     echo "Ligando..."
