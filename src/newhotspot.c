@@ -40,7 +40,7 @@ int turnOnHotspot(char ifname[MAXIFNAME])
     return 1;
   }
   sleep(3);
-  sprintf(command, "nmcli connection modify id %s connection.autoconnect yes connection.autoconnect-priority 5 ipv4.method shared", WIFI_NAME);
+  sprintf(command, "nmcli connection modify id %s connection.autoconnect yes connection.autoconnect-priority -1 ipv4.method shared", WIFI_NAME);
   if(system(command))
   {
     return 1;
