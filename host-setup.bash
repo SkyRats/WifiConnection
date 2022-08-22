@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Installing dependencies
+sudo apt install net-tools network-manager -y
+
 #Generating connection binary file
 source build.sh
 
