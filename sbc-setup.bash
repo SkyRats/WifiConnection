@@ -1,9 +1,7 @@
 #!/bin/bash
 
-cd /home/caninos/WifiConnection
-
 #Generating connection binary file
-source firstofall.sh
+source build.sh
 
 #Connection for the first time
 echo "---Para essa etapa, certifique-se que o hotspot esta ligado no seu computador pessoal!---"
