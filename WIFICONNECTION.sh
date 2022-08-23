@@ -1,9 +1,6 @@
 #!/bin/bash
 
-if   [[ $1 = "install" ]]
-then
-    sudo apt install net-tools network-manager -y
-elif [[ $1 = "start" ]]
+if [[ $1 = "start" ]]
 then
     echo "Ligando..."
     ./newhotspot
